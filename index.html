@@ -1,1 +1,54 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Fixed-Head Disk Visualization</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            margin: 0;\n            padding: 0;\n        }\n        #disk-visualization {\n            width: 100%;\n            height: 500px;\n            border: 2px solid #000;\n            position: relative;\n        }\n    </style>\n</head>\n<body>\n    <h1>Fixed-Head Disk Visualization</h1>\n    <div id="disk-visualization"></div>\n    <script>\n        // JavaScript for disk visualization goes here\n    </script>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Visualiser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #canvas {
+            border: 1px solid black;
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+        }
+        .control-panel {
+            margin: 10px;
+        }
+        button, input[type="checkbox"] {
+            margin: 5px;
+        }
+        @media (max-width: 600px) {
+            #canvas {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Disk Visualiser</h1>
+        <canvas id="canvas"></canvas>
+        <div class="control-panel">
+            <button id="physical-mode">Physical Mode</button>
+            <button id="logical-mode">Logical Mode</button>
+            <label><input type="checkbox" id="interleaving-toggle"> Enable Interleaving</label>
+            <div id="memory-display">Memory: <span id="memory-value">0</span></div>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script>
+        // JS Logic for functionalities (not included for brevity)
+    </script>
+</body>
+</html>
